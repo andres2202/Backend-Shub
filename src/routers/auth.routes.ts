@@ -74,7 +74,7 @@ export default function authRouter(router: Router): void {
    *          schema:
    *            $ref: '#/components/schemas/createUser'
    *     responses:
-   *       200:
+   *       201:
    *        description: User registered successfully
    *        content:
    *          application/json:

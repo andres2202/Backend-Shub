@@ -16,9 +16,13 @@ export class AuthController {
         try {
             let { email, password } = req.body;
             const userFound = await this.userService.getUserByEmail(email);
+            if (!userFound) {
+                res.status(404).json({ message: 'User not found' });
+                return;
+            }
             const isValidPassword = await comparePassword(password, userFound?.password as string);
-            if (!isValidPassword || !userFound) {  
-                res.status(400).json({ message: 'Invalid password or user not found' });
+            if (!isValidPassword ) {  
+                res.status(401).json({ message: 'Invalid password' });
             }else{
                 const token = await generateToken({ userId: userFound?.id as number, email: userFound?.email as string, role: userFound?.role });
                 const userResponse: UserResponse = { id: userFound.id, role: userFound.role };

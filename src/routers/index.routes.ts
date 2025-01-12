@@ -2,6 +2,7 @@ import { Router } from "express";
 
 import authRouter from "./auth.routes";
 import userRouter from "./user.routes";
+import hotelRouter from "./hotel.routes";
 
 const router = Router();
 
@@ -17,12 +18,14 @@ export default function (app: Router): Router {
      *     message:
      *      type: string
      *      description: The error message
-     *    example: Bad Request
+     *    example: 
+     *     message: Bad request
      * 
      */
 
     authRouter(app);
     userRouter(app);
+    hotelRouter(app);
     app.get('/', (req, res) => {
         res.status(200).json({ message:'Welcome to the Hotels API'});
     });

@@ -12,7 +12,7 @@
 - [Backend](#backend)
   - [Instalacion Local](#local-installation)
   - [Instalacion en Docker ](#docker-installation)
-  - [Documentacion](#documentation)
+  - [Estructura del proyecto](#documentation)
 
 ## Backend
 

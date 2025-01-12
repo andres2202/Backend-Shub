@@ -3,3 +3,5 @@ export interface Hotel{
     name: string;
     location: string;
 }
+
+export type UpdateHotel = Omit<Hotel, 'id'>;

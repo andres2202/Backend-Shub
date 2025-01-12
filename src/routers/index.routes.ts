@@ -20,6 +20,14 @@ export default function (app: Router): Router {
      *      description: The error message
      *    example: 
      *     message: Bad request
+     *   SuccessResponse:
+     *    type: object
+     *    properties:
+     *    message:
+     *     type: string
+     *     description: The success message
+     *    example:
+     *     message: Successful operation
      * 
      */
 

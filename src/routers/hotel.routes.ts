@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { HotelController } from "../controllers/hotel.controller";
-import { AuthMiddleware } from "../middlewares/AuthMiddleware";
+import { AuthMiddleware } from "../middlewares/Auth.middleware";
 
 export default function hotelRouter(router: Router): Router {
   const hotelController = new HotelController();

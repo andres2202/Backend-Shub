@@ -1,7 +1,7 @@
 import { sequelize } from "./helpers/DataBaseConnection";
 
 import express from "express";
-import router from "./routers/index.routes";
+import router from "./routes/index.routes";
 import dotenv from 'dotenv';
 import bodyParser from "body-parser";
 import swaggerDocs from "./helpers/SwaggerDocs";

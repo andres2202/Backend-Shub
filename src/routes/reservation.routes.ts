@@ -30,12 +30,14 @@ export default function reservationRouter(router: Router): Router {
     *     - hotel_id
     *     - chek_in_date
     *     - check_out_date
+    *     - hotel_name
     *    example:
     *     id: 1
     *     user_id: 1
     *     hotel_id: 1
     *     chek_in_date: 2021-09-01
     *     check_out_date: 2021-09-02
+    *     hotel_name: hotel name
     *   reservationsList:
     *    type: array
     *    items:

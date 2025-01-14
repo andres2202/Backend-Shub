@@ -32,6 +32,7 @@ export class ReservationController {
                     return {
                         reservation,
                         hotel_name: hotel?.name || "Hotel not found",
+                        hotel_location: hotel?.location || "Location not found"
                     };
                 }));
             res.status(200).json(reservationsWithHotelNames);

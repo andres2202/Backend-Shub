@@ -11,11 +11,6 @@ export class HotelController {
 
     public getHotels = async (req: Request, res: Response) => {
         try {
-            const role = req.body.tokenDecoded.role;
-            if (role !== 'admin') {
-                res.status(403).json({ message: 'You do not have the necessary permissions' });
-                return;
-            }
             let hotels: Hotel[] = await this.hotelService.getAllHotels();
             res.status(200).json(hotels);
         } catch (error) {

@@ -17,7 +17,7 @@ function main(): void {
     app.use(bodyParser.json());
     app.use(cors({
         origin: '*',
-        credentials: true,
+        // credentials: true,
         allowedHeaders: ['Content-Type', 'Authorization'],
         exposedHeaders: ['Authorization'],
       })

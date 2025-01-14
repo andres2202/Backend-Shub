@@ -41,4 +41,13 @@ export class HotelService{
             throw new Error((error as Error)?.message);
         }
     }
+
+    public async getHotelById(id: number): Promise<Hotel | null> {
+        try {
+            const hotel = await Hotels.findByPk(id);
+            return hotel;
+        } catch (error) {
+            throw new Error((error as Error)?.message);
+        }
+    }
 }
